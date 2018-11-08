@@ -1,2 +1,19 @@
 # Cloud_BigData_UCM
-Proyecto de procesamiento de datos con MapReduce/Spark
+------------------------------------------------------------
+
+Universidad Complutense de Madrid - Cloud y Big Data
+
+------------------------------------------------------------
+
+Miembros:
+------------------------------------------------------------
+Arturo Aguirre Calvo
+Adrián Fernández De La Torre
+Ismael Setti Alonso
+Adrián Burillo Elmaleh
+Arturo Pinar Adán
+
+
+Descripción:
+------------------------------------------------------------
+Procesamiento de datos con MapReduce/Spark
