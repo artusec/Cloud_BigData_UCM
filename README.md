@@ -16,5 +16,5 @@ Arturo Pinar Adán
 
 Descripción:
 ------------------------------------------------------------
-Procesamiento de datos con MapReduce/Spark
+Procesamiento de datos con pySpark
 
