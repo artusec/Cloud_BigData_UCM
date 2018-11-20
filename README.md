@@ -7,11 +7,11 @@ Universidad Complutense de Madrid - Cloud y Big Data
 
 Miembros:
 ------------------------------------------------------------
-Arturo Aguirre Calvo,
-Adrián Fernández De La Torre,
-Ismael Setti Alonso,
-Adrián Burillo Elmaleh y
-Arturo Pinar Adán
+Arturo Aguirre Calvo  
+Adrián Fernández De La Torre  
+Ismael Setti Alonso  
+Adrián Burillo Elmaleh  
+Arturo Pinar Adán  
 
 
 Descripción:
