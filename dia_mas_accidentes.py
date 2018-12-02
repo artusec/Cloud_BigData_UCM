@@ -22,7 +22,7 @@ def switch_func(fecha):
 	}
 
 if len(sys.argv) != 2:
-	print "Usage: mes_mas_accidentes [file]"
+	print "Usage: dia_mas_accidentes [file]"
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("dia_mas_Accidentes")
@@ -44,7 +44,7 @@ else:
 	
 	pr = spark.sql("select * from rdd where Num = (select max(Num) from rdd)")
 	
-	pr.write.csv("output")
+	pr.repartition(1).write.csv("output")
 
 	
 	

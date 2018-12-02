@@ -26,7 +26,7 @@ else:
 	data = spark.createDataFrame(rdd).createOrReplaceTempView("rdd")
 	
 	pr = spark.sql("select * from rdd where Num = (select max(Num) from rdd)")
-	pr.write.csv("output")
+	pr.repartition(1).write.csv("output")
 	
 	#Otra forma, pero no se como guardarlo en un archivo en vez de
 	# hacer take()
