@@ -6,7 +6,7 @@ import sys
 import pandas as pd
 
 if len(sys.argv) < 3:
-	print("Usage: dia_distrito.py [input_file] [distrito]")
+	print("Usage: distrito_calle.py [input_file] [distrito]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("distrito_calle")
