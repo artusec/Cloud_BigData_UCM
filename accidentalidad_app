@@ -1,0 +1,163 @@
+#!/usr/bin/python
+
+import sys
+import re
+import os.path as path
+import os
+
+
+# Checking info
+# ----------------------------------------------------------------------
+if len(sys.argv) != 2:
+	print("Usage: accidentalidad_app [file]")
+	sys.exit(1)
+	
+if (path.exists(sys.argv[1]) == False):
+	print("Not valid input file")
+	sys.exit(1)
+
+
+# Functions
+# ----------------------------------------------------------------------
+
+def day():
+	orden = "spark-submit dia_mas_accidentes_df.py" + " " + sys.argv[1]
+	os.system(orden)
+	
+def district():
+	orden = "spark-submit distrito_mas_accidentes_df.pyp" + " " + sys.argv[1]
+	os.system(orden)
+
+def profile():
+	orden = "spark-submit perfil_mas_accidentes_sql.py" + " " + sys.argv[1]
+	os.system(orden)
+
+def district_day():
+	orden = "spark-submit dia_distrito.py" + " " + sys.argv[1]
+	os.system(orden)
+	
+def district_street():
+	orden = "spark-submit distrito_calle.py" + " " + sys.argv[1]
+	os.system(orden)
+
+# Falta por hacer
+def vehicle():
+	orden = "spark-submit vehiculo_mas_accidentes" + " " + sys.argv[1]
+	os.system(orden)
+
+# Falta por hacer
+def met_conditions():
+	orden = "spark-submit met_conditions.py" + " " + sys.argv[1]
+	os.system(orden)
+
+# Falta por hacer
+def prediction():
+	orden = "spark-submit prediction.py" + " " + sys.argv[1]
+	os.system(orden)
+	
+
+# Init
+# ----------------------------------------------------------------------
+
+print("\n")
+print("------------------------------------------------------------------")
+print("+		Welcome to the Accident Application	         +")
+print("------------------------------------------------------------------")
+print("\n")
+print("	   __---~~~~--__                      __--~~~~---__	")
+print("	 `\---~~~~~~~~\\                    //~~~~~~~~---/'  	")
+print("	   \/~~~~~~~~~\||                  ||/~~~~~~~~~\/ 	")
+print("        	       `\\                //'			")
+print("        	         `\\            //'			")
+print("        	           ||          ||      			")
+print("	         ______--~~~~~~~~~~~~~~~~~~--______             ")
+print("	    ___ // _-~                        ~-_ \\ ___  	")
+print("	   `\__)\/~        CLOUD & BIGDATA       ~\/(__/'       ")
+print("	    _--`-___                            ___-'--_        ")
+print("	  /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\      ")
+print("	 /|        `\         ________         /'        |\     ")
+print("	| `\   ______`\_      \------/      _/'______   /' |    ")
+print("	|   `\_~-_____\ ~-________________-~ /_____-~_/'   |  	")
+print("	`.     ~-__________________________________-~     .'    ")
+print("	 `.      [_______/------|~~|------\_______]      .'	")
+print("	  `\--___((____)(________\/________)(____))___--/'      ")
+print("	   |>>>>>>||                            ||<<<<<<|	")
+print("\n")
+print("\n")
+
+
+
+
+#----------------------------------------------------------------------------
+# Esto podria usarse en caso de que no queramos dar el archivo como argumento
+def get_file():
+	print("\n")
+	fi = raw_input("Please provide the file path to work with: ")
+	while (path.exists(fi) == False):
+		response = raw_input("File doesn't exists or there are an error with it. Do you want to provide another file path? [y/n]")
+		if (response != "y" and response != "n"):
+			print("No valid response")
+			print("\n")
+		elif response == "n":
+				return -1
+		else:
+			print("\n")
+			fi = raw_input("Please provide the file path to work with: ")	
+	return fi
+#----------------------------------------------------------------------------
+
+S
+
+while True:
+	print("MENU")
+	print("------------------------------------------------------------------")
+	print("	1. Day with highest accident rate")
+	print("	2. District with the highest accident rate")
+	print("	3. Profile with higher accident rate")
+	print("	4. Most rugged district for each day of the week")
+	print("	5. Most rugged street in a district")
+	print("	6. Most rugged vehicle type")
+	print("	7. Meteorological conditions that cause more accidents")
+	print("	8. Predict the risk of a trip")
+	print("	0. Exit")
+	print("------------------------------------------------------------------")
+    
+	option = raw_input("Select an option: ")
+    
+	avaiable = { '1': day, '2': district, '3': profile, '4': district_day,\
+	'5': district_street, '6': vehicle, '7': met_conditions,\
+	'8': prediction }
+ 	
+ 	if option == '0':
+ 		print("\n")
+		print("Bye!")
+		sys.exit(1)
+ 	
+ 	try:
+		result = avaiable[option]()
+
+	except:    
+		print("Not valid option")
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
