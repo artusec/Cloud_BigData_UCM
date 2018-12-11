@@ -33,14 +33,15 @@ def profile():
 	os.system(orden)
 
 def district_day():
+	# Pedir dia
 	orden = "spark-submit dia_distrito.py" + " " + sys.argv[1]
 	os.system(orden)
 	
 def district_street():
+	# Pedir distrito
 	orden = "spark-submit distrito_calle.py" + " " + sys.argv[1]
 	os.system(orden)
 
-# Falta por hacer
 def vehicle():
 	orden = "spark-submit vehiculo.py" + " " + sys.argv[1]
 	os.system(orden)
@@ -84,27 +85,6 @@ print("	  `\--___((____)(________\/________)(____))___--/'      ")
 print("	   |>>>>>>||                            ||<<<<<<|	")
 print("\n")
 print("\n")
-
-
-
-
-#----------------------------------------------------------------------------
-# Esto podria usarse en caso de que no queramos dar el archivo como argumento
-def get_file():
-	print("\n")
-	fi = raw_input("Please provide the file path to work with: ")
-	while (path.exists(fi) == False):
-		response = raw_input("File doesn't exists or there are an error with it. Do you want to provide another file path? [y/n]")
-		if (response != "y" and response != "n"):
-			print("No valid response")
-			print("\n")
-		elif response == "n":
-				return -1
-		else:
-			print("\n")
-			fi = raw_input("Please provide the file path to work with: ")	
-	return fi
-#----------------------------------------------------------------------------
 
 
 while True:
