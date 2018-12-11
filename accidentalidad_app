@@ -21,15 +21,15 @@ if (path.exists(sys.argv[1]) == False):
 # ----------------------------------------------------------------------
 
 def day():
-	orden = "spark-submit dia_mas_accidentes_df.py" + " " + sys.argv[1]
+	orden = "spark-submit dia.py" + " " + sys.argv[1]
 	os.system(orden)
 	
 def district():
-	orden = "spark-submit distrito_mas_accidentes_df.pyp" + " " + sys.argv[1]
+	orden = "spark-submit distrito.py" + " " + sys.argv[1]
 	os.system(orden)
 
 def profile():
-	orden = "spark-submit perfil_mas_accidentes_sql.py" + " " + sys.argv[1]
+	orden = "spark-submit perfil.py" + " " + sys.argv[1]
 	os.system(orden)
 
 def district_day():
@@ -42,7 +42,7 @@ def district_street():
 
 # Falta por hacer
 def vehicle():
-	orden = "spark-submit vehiculo_mas_accidentes" + " " + sys.argv[1]
+	orden = "spark-submit vehiculo.py" + " " + sys.argv[1]
 	os.system(orden)
 
 # Falta por hacer
