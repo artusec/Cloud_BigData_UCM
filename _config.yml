@@ -1,2 +1,9 @@
 theme: jekyll-theme-cayman
 title: Accidentalidad en Madrid
+menus:
+ header:
+ title: Home
+ weight: 1
+ title: About us
+ weight: 3
+
