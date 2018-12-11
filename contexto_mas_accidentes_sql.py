@@ -10,7 +10,7 @@ import sys
 import re 
 
 if len(sys.argv) != 2:
-	print "Usage: distrito_mas_accidentes [file]"
+	print "Usage: contexto_mas_accidentes [file]"
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("contexto_mas_accidentes")
