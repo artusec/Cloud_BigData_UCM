@@ -21,11 +21,11 @@ if (path.exists(sys.argv[1]) == False):
 # ----------------------------------------------------------------------
 
 def day():
-	orden = "spark-submit dia.py" + " " + sys.argv[1]
+	orden = "spark-submit dia.py " + sys.argv[1]
 	os.system(orden)
 	
 def district():
-	orden = "spark-submit distrito.py" + " " + sys.argv[1]
+	orden = "spark-submit distrito.py " + sys.argv[1]
 	os.system(orden)
 
 def profile():
@@ -33,27 +33,30 @@ def profile():
 	os.system(orden)
 
 def district_day():
-	# Pedir dia
-	orden = "spark-submit dia_distrito.py" + " " + sys.argv[1]
+	dia = raw_input("Provide a day: ")
+	orden = "spark-submit dia_distrito.py " + sys.argv[1] + " " + day
 	os.system(orden)
 	
 def district_street():
-	# Pedir distrito
-	orden = "spark-submit distrito_calle.py" + " " + sys.argv[1]
+	district = raw_input("Provide a district: ")
+	orden = "spark-submit distrito_calle.py " + sys.argv[1] + " " + district
 	os.system(orden)
 
 def vehicle():
-	orden = "spark-submit vehiculo.py" + " " + sys.argv[1]
+	orden = "spark-submit vehiculo.py " + sys.argv[1]
 	os.system(orden)
 
-# Falta por hacer
 def met_conditions():
-	orden = "spark-submit met_conditions.py" + " " + sys.argv[1]
+	orden = "spark-submit met_conditions.py " + sys.argv[1]
 	os.system(orden)
 
 # Falta por hacer
 def prediction():
-	orden = "spark-submit prediction.py" + " " + sys.argv[1]
+	orden = "spark-submit prediction.py " + sys.argv[1]
+	os.system(orden)
+
+def show_districts():
+	orden = "spark-submit show_districts.py " + sys.argv[1]
 	os.system(orden)
 	
 
@@ -84,10 +87,11 @@ print("	 `.      [_______/------|~~|------\_______]      .'	")
 print("	  `\--___((____)(________\/________)(____))___--/'      ")
 print("	   |>>>>>>||                            ||<<<<<<|	")
 print("\n")
-print("\n")
 
 
+# main bucle
 while True:
+	print("\n")
 	print("MENU")
 	print("------------------------------------------------------------------")
 	print("	1. Day with highest accident rate")
@@ -98,6 +102,7 @@ while True:
 	print("	6. Most rugged vehicle type")
 	print("	7. Meteorological conditions that cause more accidents")
 	print("	8. Predict the risk of a trip")
+	print("	9. Show districts")
 	print("	0. Exit")
 	print("------------------------------------------------------------------")
     
@@ -105,7 +110,7 @@ while True:
     
 	avaiable = { '1': day, '2': district, '3': profile, '4': district_day,\
 	'5': district_street, '6': vehicle, '7': met_conditions,\
-	'8': prediction }
+	'8': prediction, '9' : show_districts }
  	
  	if option == '0':
  		print("\n")
