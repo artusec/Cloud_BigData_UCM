@@ -33,13 +33,13 @@ def profile():
 	os.system(orden)
 
 def district_day():
-	dia = raw_input("Provide a day: ")
-	orden = "spark-submit dia_distrito.py " + sys.argv[1] + " " + day
+	dia = raw_input("	Provide a day: ")
+	orden = "spark-submit dia_distrito.py " + sys.argv[1] + " " + dia
 	os.system(orden)
 	
 def district_street():
-	district = raw_input("Provide a district: ")
-	orden = "spark-submit distrito_calle.py " + sys.argv[1] + " " + district
+	dis = raw_input("	Provide a district: ")
+	orden = "spark-submit distrito_calle.py " + sys.argv[1] + " " + dis
 	os.system(orden)
 
 def vehicle():
@@ -58,42 +58,59 @@ def prediction():
 def show_districts():
 	orden = "spark-submit show_districts.py " + sys.argv[1]
 	os.system(orden)
+
+def choose_street():
+	dis = raw_input("	Provide a district: ")
+	dia = raw_input("	Provide a day: ")
+	orden = "spark-submit chooseStreet.py " + sys.argv[1] + " " + dis + " " + dia
+	os.system(orden)
+
+def met_conditions_district():
+	dis = raw_input("	Provide a district: ")
+	orden = "spark-submit met_conditions_by_district.py " + sys.argv[1] + " " + dis
+	os.system(orden)
+
+def hours_district():
+	dis = raw_input("	Provide a district: ")
+	dia = raw_input("	Provide a day: ")
+	orden = "spark-submit horasDistrito.py " + sys.argv[1] + " " + dis + " " + dia
+	os.system(orden)
 	
 
 # Init
 # ----------------------------------------------------------------------
 
 print("\n")
-print("------------------------------------------------------------------")
-print("+		Welcome to the Accident Application	         +")
-print("------------------------------------------------------------------")
+print("------------------------------------------------------------------------------")
+print("+		    Welcome to the Accident Application	        	    +")
+print("------------------------------------------------------------------------------")
 print("\n")
-print("	   __---~~~~--__                      __--~~~~---__	")
-print("	 `\---~~~~~~~~\\                    //~~~~~~~~---/'  	")
-print("	   \/~~~~~~~~~\||                  ||/~~~~~~~~~\/ 	")
-print("        	       `\\                //'			")
-print("        	         `\\            //'			")
-print("        	           ||          ||      			")
-print("	         ______--~~~~~~~~~~~~~~~~~~--______             ")
-print("	    ___ // _-~                        ~-_ \\ ___  	")
-print("	   `\__)\/~        CLOUD & BIGDATA       ~\/(__/'       ")
-print("	    _--`-___                            ___-'--_        ")
-print("	  /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\      ")
-print("	 /|        `\         ________         /'        |\     ")
-print("	| `\   ______`\_      \------/      _/'______   /' |    ")
-print("	|   `\_~-_____\ ~-________________-~ /_____-~_/'   |  	")
-print("	`.     ~-__________________________________-~     .'    ")
-print("	 `.      [_______/------|~~|------\_______]      .'	")
-print("	  `\--___((____)(________\/________)(____))___--/'      ")
-print("	   |>>>>>>||                            ||<<<<<<|	")
+print("	      __---~~~~--__                      __--~~~~---__	")
+print("	    `\---~~~~~~~~\\                    //~~~~~~~~---/'  	")
+print("	      \/~~~~~~~~~\||                  ||/~~~~~~~~~\/ 	")
+print("        	          `\\                //'			")
+print("        	            `\\            //'			")
+print("        	              ||          ||      			")
+print("	            ______--~~~~~~~~~~~~~~~~~~--______             ")
+print("	       ___ // _-~                        ~-_ \\ ___  	")
+print("	      `\__)\/~        CLOUD & BIGDATA       ~\/(__/'       ")
+print("	       _--`-___                            ___-'--_        ")
+print("	     /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\      ")
+print("	    /|        `\         ________         /'        |\     ")
+print("	   | `\   ______`\_      \------/      _/'______   /' |    ")
+print("	   |   `\_~-_____\ ~-________________-~ /_____-~_/'   |  	")
+print("	   `.     ~-__________________________________-~     .'    ")
+print("	    `.      [_______/------|~~|------\_______]      .'	")
+print("	     `\--___((____)(________\/________)(____))___--/'      ")
+print("	      |>>>>>>||                            ||<<<<<<|	")
 print("\n")
 
 
 # main bucle
 while True:
 	print("\n")
-	print("MENU")
-	print("------------------------------------------------------------------")
+	print("	MENU")
+	print("------------------------------------------------------------------------------")
 	print("	1. Day with highest accident rate")
 	print("	2. District with the highest accident rate")
 	print("	3. Profile with higher accident rate")
@@ -103,14 +120,19 @@ while True:
 	print("	7. Meteorological conditions that cause more accidents")
 	print("	8. Predict the risk of a trip")
 	print("	9. Show districts")
+	print("	10. Choose street less rugged from a district")
+	print("	11. Meteorological conditions that cause more accidents by district")
+	print("	12. Hour with more accident rate in a district")
+	print("\n")
 	print("	0. Exit")
-	print("------------------------------------------------------------------")
+	print("------------------------------------------------------------------------------")
     
-	option = raw_input("Select an option: ")
+	option = raw_input("	Select an option: ")
     
 	avaiable = { '1': day, '2': district, '3': profile, '4': district_day,\
-	'5': district_street, '6': vehicle, '7': met_conditions,\
-	'8': prediction, '9' : show_districts }
+	'5': district_street, '6': vehicle, '7': met_conditions, '8': prediction,\
+	'9' : show_districts, '10' : choose_street, '11' : met_conditions_district,\
+	'12' : hours_district}
  	
  	if option == '0':
  		print("\n")

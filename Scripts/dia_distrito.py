@@ -5,7 +5,7 @@ import string
 import sys
 import pandas as pd
 
-if len(sys.argv) < 3:
+if len(sys.argv) != 3:
 	print("Usage: dia_distrito.py [input_file] [day_of_week]")
 	exit(-1)
 else:
