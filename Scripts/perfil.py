@@ -16,9 +16,9 @@ else:
 	spark = SparkSession(sc)
 	sqlContext = SQLContext(spark)
 	
-	archivo_input = sys.argv[1]
+	fi = sys.argv[1]
 	
-	text = sc.textFile(archivo_input)
+	text = sc.textFile(fi)
 	rdd = text.filter(lambda line: "FECHA" not in line)\
 	.filter(lambda line: "NO ASIGNADO" not in line)\
 	.filter(lambda line: "DESCONOCIDA" not in line)\
@@ -30,13 +30,8 @@ else:
 	pr = spark.sql("select Sexo, Edad, count(Num) as Cuenta from rdd group by Sexo, Edad\
 	order by Cuenta desc")
 	
-	#pr.repartition(1).write.csv("output")
-	
-	pr.show()
+	pr.repartition(1).write.csv("output")
 
-	
-	
-	
 	
 	
 	

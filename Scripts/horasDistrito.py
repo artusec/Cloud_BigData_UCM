@@ -5,7 +5,7 @@ import string
 import sys
 import pandas as pd
 
-if len(sys.argv) < 4:
+if len(sys.argv) != 4:
 	print("Usage: chooseStreet.py [input_file] [distrito] [day]")
 	exit(-1)
 else:

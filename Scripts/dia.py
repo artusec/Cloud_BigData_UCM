@@ -5,22 +5,6 @@ from pyspark.sql import SQLContext
 import string
 import sys
 
-#Esto no se usa aun, porque falta extraer el mes de la fecha
-#que esta en formato dd/mm/aaa. Solo es para que la salida
-#sea algo mas bonica
-def switch_func(fecha):
-	switcher = {
-		01: "January",
-		02: "February",
-		03: "March",
-		04: "April",
-		05: "May",
-		06: "June",
-		10: "October",
-		11: "November",
-		12: "December"
-	}
-
 if len(sys.argv) != 2:
 	print "Usage: dia_mas_accidentes [file]"
 	exit(-1)
