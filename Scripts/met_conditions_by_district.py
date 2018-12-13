@@ -4,6 +4,7 @@ from pyspark.sql.functions import mean, desc
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
 from pyspark.sql.functions import array_contains
+import numpy as np
 
 
 import string
@@ -52,108 +53,43 @@ else:
 	cpfa_hielo_counted = 0
 	cpfa_niebla_counted = 0
 	cpfa_seco_counted = 0
-	cpfa_niebla_counted = 0
-	cpsv_seca_counted = 0
+	cpfa_nieve_counted = 0
 	cpsv_mojada_counted = 0
 	cpsv_aceite_counted = 0
 	cpsv_barro_counted = 0
 	cpsv_grava_counted = 0
 	cpsv_hielo_counted = 0
+	cpsv_seca_counted = 0	
 
-	cpfa_granizo_aux = cpfa_granizo.select('count').collect()
-	if(len(cpfa_granizo_aux) > 0): 
-		cpfa_granizo_aux[0] = str(cpfa_granizo_aux[0])
-		cpfa_granizo_aux2 = re.sub(r'[^0-9]', '', ''.join(cpfa_granizo_aux))
-		cpfa_granizo_counted = int(cpfa_granizo_aux2)
+counter = np.array([cpfa_granizo_counted , cpfa_hielo_counted, cpfa_niebla_counted, cpfa_seco_counted, cpfa_nieve_counted, cpsv_mojada_counted,
+cpsv_aceite_counted, cpsv_barro_counted, cpsv_grava_counted, cpsv_hielo_counted, cpsv_seca_counted])
+data = np.array([cpfa_granizo, cpfa_hielo, cpfa_niebla, cpfa_seco, cpfa_nieve, cpsv_mojada, cpsv_aceite, cpsv_barro, cpsv_grava, cpsv_hielo, cpsv_seca])
+	
+for i in np.arange(0,11):
+	aux = data[i].select('count').collect()
+	if(len(aux) > 0): 
+		aux[0] = str(aux[0])
+		aux2 = re.sub(r'[^0-9]', '', ''.join(aux))
+		counter[i] = int(aux2)
 		valid = True
 
-	cpfa_hielo_aux = cpfa_hielo.select('count').collect()
-	if(len(cpfa_hielo_aux) > 0): 
-		cpfa_hielo_aux[0] = str(cpfa_hielo_aux[0])
-		cpfa_hielo_aux2 = re.sub(r'[^0-9]', '', ''.join(cpfa_hielo_aux))
-		cpfa_hielo_counted = int(cpfa_hielo_aux2)
-		valid = True
-
-	cpfa_niebla_aux = cpfa_niebla.select('count').collect()
-	if(len(cpfa_niebla_aux) > 0):
-		cpfa_niebla_aux[0] = str(cpfa_niebla_aux[0])
-		cpfa_niebla_aux2 = re.sub(r'[^0-9]', '', ''.join(cpfa_niebla_aux))
-		cpfa_niebla_counted = int(cpfa_niebla_aux2)
-		valid = True
-
-	cpfa_seco_aux = cpfa_seco.select('count').collect()
-	if(len(cpfa_seco_aux) > 0):
-		cpfa_seco_aux[0] = str(cpfa_seco_aux[0])
-		cpfa_seco_aux2 = re.sub(r'[^0-9]', '', ''.join(cpfa_seco_aux))
-		cpfa_seco_counted = int(cpfa_seco_aux2)
-		valid = True
-
-	cpfa_nieve_aux = cpfa_nieve.select('count').collect()
-	if(len(cpfa_nieve_aux) > 0):
-		cpfa_nieve_aux[0] = str(cpfa_nieve_aux[0])
-		cpfa_nieve_aux2 = re.sub(r'[^0-9]', '', ''.join(cpfa_nieve_aux))
-		cpfa_nieve_counted = int(cpfa_nieve_aux2)
-		valid = True
-
-	cpsv_mojada_aux = cpsv_mojada.select('count').collect()
-	if(len(cpsv_mojada_aux) > 0):
-		cpsv_mojada_aux[0] = str(cpsv_mojada_aux[0])
-		cpsv_mojada_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_mojada_aux))
-		cpsv_mojada_counted = int(cpsv_mojada_aux2)
-		valid = True
-
-	cpsv_aceite_aux = cpsv_aceite.select('count').collect()
-	if(len(cpsv_aceite_aux) > 0):
-		cpsv_aceite_aux[0] = str(cpsv_aceite_aux[0])
-		cpsv_aceite_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_aceite_aux))
-		cpsv_aceite_counted = int(cpsv_aceite_aux2)
-		valid = True
-
-	cpsv_barro_aux = cpsv_barro.select('count').collect()
-	if(len(cpsv_barro_aux) > 0):
-		cpsv_barro_aux[0] = str(cpsv_barro_aux[0])
-		cpsv_barro_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_barro_aux))
-		cpsv_barro_counted = int(cpsv_barro_aux2)
-		valid = True
-
-	cpsv_grava_aux = cpsv_grava.select('count').collect()
-	if(len(cpsv_grava_aux) > 0):
-		cpsv_grava_aux[0] = str(cpsv_grava_aux[0])
-		cpsv_grava_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_grava_aux))
-		cpsv_grava_counted = int(cpsv_grava_aux2)
-		valid = True
-
-	cpsv_hielo_aux = cpsv_hielo.select('count').collect()
-	if(len(cpsv_hielo_aux) > 0):
-		cpsv_hielo_aux[0] = str(cpsv_hielo_aux[0])
-		cpsv_hielo_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_hielo_aux))
-		cpsv_hielo_counted = int(cpsv_hielo_aux2)
-		valid = True
-
-	cpsv_seca_aux = cpsv_seca.select('count').collect()
-	if(len(cpsv_seca_aux) > 0):
-		cpsv_seca_aux[0] = str(cpsv_seca_aux[0])
-		cpsv_seca_aux2 = re.sub(r'[^0-9]', '', ''.join(cpsv_seca_aux))
-		cpsv_seca_counted = int(cpsv_seca_aux2)
-		valid = True
-
-
-	if(valid == True): 
-		df_result = spark.createDataFrame([("Condiciones Meteorologicas: Granizo", cpfa_granizo_counted),
-										("Condiciones Meteorologicas: Hielo", cpfa_hielo_counted), 
-										("Condiciones Meteorologicas: Niebla", cpfa_nieve_counted),
-										("Condiciones Meteorologicas: Seco y Despejado", cpfa_seco_counted), 
-										("Condiciones Meteorologicas: Nieve", cpfa_nieve_counted), 
-										("Condiciones de la Via: Mojada", cpsv_mojada_counted), 
-										("Condiciones de la Via: Derrape por aceite", cpsv_aceite_counted), 
-										("Condiciones de la Via: Derrape por barro", cpsv_barro_counted), 
-										("Condiciones de la Via: Via con grava", cpsv_grava_counted), 
-										("Condiciones de la Via: Derrape por hielo", cpsv_hielo_counted), 
-										("Condiciones de la Via: Siniestro en via seca y despejada", cpsv_seca_counted)
-										], schema)
-		df_result.orderBy(df_result["Number of accidents"].desc()).show(20, False)
-	else: 
-		print("We couldn't find a district with the name you searched")
+if(valid == True): 
+	df_result1 = spark.createDataFrame([ 
+									("Condiciones Meteorologicas: Granizo", int(counter[0])),
+									("Condiciones Meteorologicas: Hielo", int(counter[1])), 
+									("Condiciones Meteorologicas: Niebla", int(counter[2])),
+									("Condiciones M Seco y Despejado", int(counter[3])), 
+									("Condiciones Meteorologicas: Nieve", int(counter[4])), 
+									("Condiciones de la Via: Mojada", int(counter[5])), 
+									("Condiciones de la Via: Derrape por aceite", int(counter[6])), 
+									("Condiciones de la Via: Derrape por barro", int(counter[7])), 
+									("Condiciones de la Via: Via con grava", int(counter[8])), 
+									("Condiciones de la Via: Derrape por hielo", int(counter[9])), 
+									("Condiciones de la Via: Siniestro en via seca y despejada", int(counter[10]))
+									], schema)
+	df_result1.orderBy(df_result1["Number of accidents"].desc()).show(20, False)
+else: 
+	print("We couldn't find a district with the name you searched")
 
 	
 	

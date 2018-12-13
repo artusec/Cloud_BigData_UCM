@@ -18,8 +18,13 @@ else:
 	data = spark.read.format("csv").option("header", "true").load(file)
 	print(type(data['Tipo Vehiculo']))
 
-	vehicles = data.select('Tipo Vehiculo').filter(data['Tipo Vehiculo'] != "NO ASIGNADO")
+	vehicles = data.select('Tipo Vehiculo').filter(data['Tipo Vehiculo'] != "NO ASIGNADO").filter(data['Tipo Vehiculo'] != "VARIOS")
 
 	vehicles_grouped = vehicles.groupBy('Tipo Vehiculo').count()
 
 	vehicles_result = vehicles_grouped.orderBy(vehicles_grouped["count"].desc()).show()
+
+
+
+
+
