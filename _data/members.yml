@@ -1,0 +1,39 @@
+# Members
+
+- name: Arturo Aguirre Calvo
+  role: Estudiante de Ingenieria Informática en la Universidad Complutense de Madrid
+  img: https://avatars1.githubusercontent.com/artuyero?v=3&s=460
+  github: artuyero
+  visible: true
+   
+- name: Adrian Burillo Elmaleh
+  role: Estudiante de Ingenieria Informática en la Universidad Complutense de Madrid
+  img: https://avatars1.githubusercontent.com/aburillo?v=3&s=460
+  github: aburillo
+  visible: true
+
+- name: Adrián Fernández de la Torre
+  role: Estudiante de Ingenieria Informática en la Universidad Complutense de Madrid
+  img: https://avatars1.githubusercontent.com/adri1197?v=3&s=460
+  github: adri1197
+  visible: true
+
+- name: Arturo Pinar Adán
+  role: Estudiante de Ingenieria Informática en la Universidad Complutense de Madrid
+  img: https://avatars1.githubusercontent.com/arthur170707?v=3&s=460
+  github: arthur170707
+  visible: true
+  
+- name: Ismael Setti Alonso
+  role: Estudiante de Ingenieria Informática en la Universidad Complutense de Madrid
+  img: https://avatars1.githubusercontent.com/ismaelsetti?v=3&s=460
+  github: ismaelsetti
+  visible: true
+
+
+#- name: Surya R. Kalidindi
+#  role: Materials Informatics
+#  img: https://avatars1.githubusercontent.com/u/6601815?v=3&s=400
+#  bio: Dr. Kalidindi’s research interests are broadly centered on designing material internal structure (including composition) for optimal performance in any selected application and identifying hybrid processing routes for its manufacture. To this end, he has employed a harmonious blend of experimental, theoretical, and numerical approaches in his research.
+#  url: http://mined.gatech.edu/
+#  visible: false
