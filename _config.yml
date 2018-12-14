@@ -10,7 +10,7 @@ url: "https://artuyero.github.io"
 baseurl: "/Cloud_BigData_UCM/"
 header-img: img/Foto-bg.png
 headercolor: "#FFFFFF"
-logo: /img/logos/Logo_Madrid.png
+logo: img/logos/Logo_Madrid.png
 
 # Tertiary Parameters
 github_username: artuyero
