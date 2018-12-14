@@ -7,7 +7,7 @@ category:  project1
 ---
 <!-- Start Writing Below in Markdown -->
 
-# Table of Contents
+# Tabla de contenidos
 
 * TOC
 {:toc}
@@ -17,8 +17,6 @@ category:  project1
 # Como ejecutarlo
 
 # Salida del programa
-
-Inline `code`.
 
 {% highlight python %}
 
@@ -60,7 +58,7 @@ MUJER     DE 15 A 17 AÑOS     730
 
 {% endhighlight %}
 
-# Analisis de Tiempos en el Cluster
+# Análisis de Tiempos en el Cluster
 
 Master | Cores | Executors | Executors Cores | Tiempo
 |:---------|:----------|:----------:|---------:|---------:|
