@@ -30,8 +30,7 @@ else:
 	pr = spark.sql("select Sexo, Edad, count(Num) as Cuenta from rdd group by Sexo, Edad\
 	order by Cuenta desc")
 	
-	pr.repartition(1).write.csv("output")
-
+	print pr.toPandas()
 	
 	
 	
