@@ -1,13 +1,13 @@
 # Site settings
 title: Accidentalidad en la Ciudad de Madrid
 description: "Analisis de datos de la Accidentalidad en la ciudad de Madrid con Spark"
-url: "https://artuyero.github.io/Cloud_BigData_UCM/"
+url: "https://artuyero.github.io/Cloud_BigData_UCM"
 
 
 
 
 # Secondary Parameters
-baseurl: ""
+baseurl: "/"
 header-img: img/Foto-bg.png
 headercolor: "#FFFFFF"
 logo: /img/logos/Logo_Madrid.png
