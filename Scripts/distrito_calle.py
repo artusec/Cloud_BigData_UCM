@@ -28,4 +28,4 @@ else:
 	
 	result = lugares_distrito_count.sort_values('COUNT', ascending=False)
 
-	print(result.to_string())
+	print pd.DataFrame(result)
