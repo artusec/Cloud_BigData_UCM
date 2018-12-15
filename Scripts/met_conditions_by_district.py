@@ -1,6 +1,6 @@
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SparkSession, Row
-from pyspark.sql.functions import mean, desc
+from pyspark.sql.functions import mean, desc, size
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
 from pyspark.sql.functions import array_contains
@@ -30,17 +30,17 @@ else:
 
 	data = spark.read.format("csv").option("header", "true").load(file)
 
-	cpfa_granizo = data.select('CPFA Granizo').filter(data['CPFA Granizo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPFA Granizo').count()
-	cpfa_hielo = data.select('CPFA Hielo').filter(data['CPFA Hielo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPFA Hielo').count()
-	cpfa_niebla = data.select('CPFA Niebla').filter(data['CPFA Niebla'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPFA Niebla').count()
-	cpfa_seco = data.select('CPFA Seco').filter(data['CPFA Seco'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPFA Seco').count()
-	cpfa_nieve = data.select('CPFA Nieve').filter(data['CPFA Nieve'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPFA Nieve').count()
-	cpsv_mojada = data.select('CPSV Mojada').filter(data['CPSV Mojada'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Mojada').count()
-	cpsv_aceite = data.select('CPSV Aceite').filter(data['CPSV Aceite'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Aceite').count()
-	cpsv_barro = data.select('CPSV Barro').filter(data['CPSV Barro'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Barro').count()
-	cpsv_grava = data.select('CPSV Grava Suelta').filter(data['CPSV Grava Suelta'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Grava Suelta').count()
-	cpsv_hielo = data.select('CPSV Hielo').filter(data['CPSV Hielo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Hielo').count()
-	cpsv_seca = data.select('CPSV Seca y Limpia').filter(data['CPSV Seca y Limpia'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy('CPSV Seca y Limpia').count()
+	cpfa_granizo = data.select('CPFA Granizo').filter(data['CPFA Granizo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPFA Granizo']).count()
+	cpfa_hielo = data.select('CPFA Hielo').filter(data['CPFA Hielo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPFA Hielo']).count()
+	cpfa_niebla = data.select('CPFA Niebla').filter(data['CPFA Niebla'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPFA Niebla']).count()
+	cpfa_seco = data.select('CPFA Seco').filter(data['CPFA Seco'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPFA Seco']).count()
+	cpfa_nieve = data.select('CPFA Nieve').filter(data['CPFA Nieve'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPFA Nieve']).count()
+	cpsv_mojada = data.select('CPSV Mojada').filter(data['CPSV Mojada'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Mojada']).count()
+	cpsv_aceite = data.select('CPSV Aceite').filter(data['CPSV Aceite'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Aceite']).count()
+	cpsv_barro = data.select('CPSV Barro').filter(data['CPSV Barro'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Barro']).count()
+	cpsv_grava = data.select('CPSV Grava Suelta').filter(data['CPSV Grava Suelta'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Grava Suelta']).count()
+	cpsv_hielo = data.select('CPSV Hielo').filter(data['CPSV Hielo'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Hielo']).count()
+	cpsv_seca = data.select('CPSV Seca y Limpia').filter(data['CPSV Seca y Limpia'] != "NO").filter(data['DISTRITO'].contains(district)).groupBy(data['CPSV Seca y Limpia']).count()
 
 	schema = StructType([
 		StructField("Situation", StringType(), True),
