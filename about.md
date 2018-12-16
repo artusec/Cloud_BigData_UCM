@@ -10,7 +10,7 @@ Nuestro proyecto consiste en analizar los datos obtenidos de la [sede de datos d
 Todos los programas realizados se encuentran en la carpeta /Scripts del repositorio, pero en la seccion [Proyecto][3] de esta página, hemos publicado cada uno de ellos, explicando su funcionamiento, la salida que ofrece y el tiempo de procesamiento, según diferentes configuraciones. 
 
 ## Herramientas
-Para poder realizar este análisis y tratamiento de los datos, hemos utilizado Spark con Python en un cluster de Spark en AWS (Amazon Web Service).
+Para poder realizar este análisis y tratamiento de los datos, hemos utilizado Spark con Python (***v.3.7.1***) (usando la libreria de Pandas) en un cluster de Spark en AWS (Amazon Web Service).
 Las especificaciones de la maquina utilizada son las siguientes:
 
 Sección | Configuración
@@ -19,6 +19,15 @@ Release   | emr-5.8.0
 Applications    | Spark
 Tipo de Instancias  | m4.xlarge
 Numero de Instancias  | 3 o 5, según los tiempos
+
+Para poder generar las gráficas mostradas hemos utilizado el modulo ***plot*** de Python. Para instalarlo, debes ejecutar los siguientes comandos:
+
+{% highlight shell %}
+
+sudo pip install plot
+
+{% endhighlight %}
+
 
 
 El contenido, tanto de esta Web, como del repositorio, es parte de la realización de un proyecto para la asignatura de Cloud & Big Data de la Universidad Complutense de Madrid.

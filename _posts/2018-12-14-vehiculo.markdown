@@ -1,14 +1,21 @@
 ---
 layout:     post
-title:      Dia con más accidentes
-tags: 		Spark Dia AWS
-subtitle:  	Este programa muestra la fecha de los dias con más accidentes
+title:      Vehiculos más accidentados
+tags: 		Spark AWS Dia Distritos  	
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->
 
 # Descripción del Programa
-Este programa permite obtener la fecha de los dias con más accidentes en la ciudad de Madrid. Además de mostrar la fecha, nos indica cuantos accidentes hubo en ese día
+Este programa muestra los tipos de vehiculos más accidentados. Los vehiculos pueden ser:
+
+- Turismo
+- Motocicleta
+- Furgoneta
+- Vehiculo de 3 ruedas
+- Ambulancia
+- Más...
+
 # Como ejecutarlo
 
 ## 1. Modo Local
@@ -31,11 +38,11 @@ Una vez que ya hemos elegido el modo de ejecución y revisado todos los elemento
 
 {% highlight shell %}
 
-spark-submit dia.py (file)
+spark-submit vehiculo.py (file)
 
 {% endhighlight %}
 
-- El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
+- El contenido ***file*** representa el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
 
 
 Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:
@@ -51,44 +58,22 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% highlight python %}
 
-+----------+-----+
-|     FECHA|count|
-+----------+-----+
-|25/10/2013|  212|
-|21/12/2017|  182|
-|28/11/2017|  173|
-|10/03/2017|  170|
-|11/10/2013|  166|
-|13/12/2013|  165|
-|12/02/2016|  164|
-|30/06/2011|  163|
-|05/03/2010|  162|
-|30/10/2015|  159|
-|04/11/2016|  156|
-|06/10/2017|  155|
-|19/12/2013|  154|
-|25/11/2016|  153|
-|11/05/2017|  152|
-|05/11/2016|  151|
-|04/11/2011|  150|
-|14/12/2012|  150|
-|06/04/2018|  149|
-|19/12/2014|  148|
-+----------+-----+
++--------------------+------+
+|       Tipo Vehiculo| count|
++--------------------+------+
+|TURISMO          ...|128974|
+|MOTOCICLETA      ...| 32026|
+|FURGONETA        ...|  9690|
+|AUTO-TAXI        ...|  8144|
+|AUTOBUS-AUTOCAR  ...|  6883|
+|CICLOMOTOR       ...|  5914|
+|BICICLETA        ...|  5429|
+|CAMION           ...|  2441|
+|VARIOS           ...|  2063|
+|AMBULANCIA       ...|   482|
+|VEH.3 RUEDAS     ...|    39|
++--------------------+------+
 
 {% endhighlight %}
-
-# Análisis de Tiempos en el Cluster
-
-Master | Cores | Executors | Executors Cores | Tiempo
-|:---------|:----------|:----------:|---------:|---------:|
-1 | 2 |  2  | 1 | 0,5s |
-1 | 2 |  2  | 2 | 0,5s | 
-1 | 4 |  2  | 1 | 0,5s |
-1 | 4 |  2  | 2 | 0,5s |
-1 | 4 |  4  | 1 | 0,5s |
-1 | 4 |  4  | 2 | 0,5s |
-1 | 4 |  4  | 4 | 0,5s |
-
 
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/

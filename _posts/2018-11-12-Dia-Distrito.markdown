@@ -37,7 +37,7 @@ spark-submit dia_distrito.py (file) (dia de la semana)
 {% endhighlight %}
 
 - El contenido ***file*** representa el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
-- En el campo de dia de la semana, hay que incluir el dia de la semana que queremos analizar (lunes, martes,etc.). **IMPORTANTE:** para que funcione el dia tiene que estar escrito en español
+- En el campo de ***dia de la semana***, hay que incluir el dia de la semana que queremos analizar (lunes, martes,etc.). **IMPORTANTE:** para que funcione el dia tiene que estar escrito en español
 
 
 Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:

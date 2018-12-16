@@ -35,7 +35,7 @@ spark-submit perfil.py (file)
 
 {% endhighlight %}
 
-- El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
+- El contenido ***file*** representa el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
 
 
 Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:
@@ -89,18 +89,5 @@ MUJER      DE 6 A 9 AÑOS      818
 MUJER     DE 15 A 17 AÑOS     730
 
 {% endhighlight %}
-
-# Análisis de Tiempos en el Cluster
-
-Master | Cores | Executors | Executors Cores | Tiempo
-|:---------|:----------|:----------:|---------:|---------:|
-1 | 2 |  2  | 1 | 0,5s |
-1 | 2 |  2  | 2 | 0,5s | 
-1 | 4 |  2  | 1 | 0,5s |
-1 | 4 |  2  | 2 | 0,5s |
-1 | 4 |  4  | 1 | 0,5s |
-1 | 4 |  4  | 2 | 0,5s |
-1 | 4 |  4  | 4 | 0,5s |
-
 
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
