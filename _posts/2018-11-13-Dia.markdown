@@ -78,7 +78,4 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% endhighlight %}
 
-
-
-
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
