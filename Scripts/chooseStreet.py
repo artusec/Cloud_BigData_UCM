@@ -1,6 +1,7 @@
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SparkSession, Row
 from pyspark.sql import SQLContext
+import matplotlib.pyplot as plt
 import string
 import sys
 import pandas as pd
@@ -21,6 +22,12 @@ else:
 
 	data['DISTRITO'] = data['DISTRITO'].str.rstrip(' ')
 
+	data['DISTRITO'] = data['DISTRITO'].str.lstrip(' ')
+
+	data['LUGAR ACCIDENTE'] = data['LUGAR ACCIDENTE'].str.rstrip(' ')
+
+	data['LUGAR ACCIDENTE'] = data['LUGAR ACCIDENTE'].str.lstrip(' ')
+
 	data_distrito_day = data[(data['DISTRITO'] == distrito) & (data['DIA SEMANA'] == day)]
 	
 	lugares_distrito_day = data_distrito_day[['LUGAR ACCIDENTE']]
@@ -29,10 +36,14 @@ else:
 
 	totalInt = total[0]
 
-	lugares_distrito_day_count = lugares_distrito_day.groupby(['LUGAR ACCIDENTE']).size().to_frame('COUNT')
+	lugares_distrito_day_count = lugares_distrito_day.groupby(['LUGAR ACCIDENTE']).size().to_frame('COUNT').reset_index()
 
 	lugares_distrito_day_count['PERCENT'] = lugares_distrito_day_count['COUNT'] / totalInt * 100
 	
 	result = lugares_distrito_day_count.sort_values('PERCENT', ascending=False)
 
 	print(result.to_string())
+
+	result[:20].plot(x='LUGAR ACCIDENTE', y='COUNT', kind='barh')
+
+	plt.show()

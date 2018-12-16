@@ -1,6 +1,7 @@
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SparkSession, Row
 from pyspark.sql import SQLContext
+import matplotlib.pyplot as plt
 import string
 import sys
 import pandas as pd
@@ -29,10 +30,14 @@ else:
 
 	totalInt = total[0]
 
-	horas_distrito_day_count = horas_distrito_day.groupby(['RANGO HORARIO']).size().to_frame('COUNT')
+	horas_distrito_day_count = horas_distrito_day.groupby(['RANGO HORARIO']).size().to_frame('COUNT').reset_index()
 
 	horas_distrito_day_count['PERCENT'] = horas_distrito_day_count['COUNT'] / totalInt * 100
 	
 	result = horas_distrito_day_count.sort_values('PERCENT', ascending=False)
 
 	print(result.to_string())
+
+	result.plot(x='RANGO HORARIO', y='COUNT', kind='barh')
+
+	plt.show()

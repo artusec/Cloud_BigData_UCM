@@ -1,6 +1,7 @@
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SparkSession, Row
 from pyspark.sql import SQLContext
+import matplotlib.pyplot as plt
 import string
 import sys
 import pandas as pd
@@ -20,12 +21,22 @@ else:
 
 	data['DISTRITO'] = data['DISTRITO'].str.rstrip(' ')
 
+	data['DISTRITO'] = data['DISTRITO'].str.lstrip(' ')
+
+	data['LUGAR ACCIDENTE'] = data['LUGAR ACCIDENTE'].str.rstrip(' ')
+
+	data['LUGAR ACCIDENTE'] = data['LUGAR ACCIDENTE'].str.lstrip(' ')
+	
 	data_distrito = data[data['DISTRITO'] == distrito]
 	
 	lugares_distrito = data_distrito[['LUGAR ACCIDENTE']]
 
-	lugares_distrito_count = lugares_distrito.groupby(['LUGAR ACCIDENTE']).size().to_frame('COUNT')
+	lugares_distrito_count = lugares_distrito.groupby(['LUGAR ACCIDENTE']).size().to_frame('COUNT').reset_index()
 	
 	result = lugares_distrito_count.sort_values('COUNT', ascending=False)
 
 	print(result.to_string())
+
+	result[:20].plot(x='LUGAR ACCIDENTE', y='COUNT', kind='barh')
+
+	plt.show()
