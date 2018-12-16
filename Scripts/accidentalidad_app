@@ -34,8 +34,11 @@ def profile():
 
 def district_day():
 	dia = raw_input("	Provide a day: ")
-	orden = "spark-submit dia_distrito.py " + sys.argv[1] + " " + dia
-	os.system(orden)
+	if(check_day(dia) == True):
+		orden = "spark-submit dia_distrito.py " + sys.argv[1] + " " + dia
+		os.system(orden)
+	else:
+		print("	Not valid day")
 	
 def district_street():
 	dis = raw_input("	Provide a district: ")
@@ -57,8 +60,11 @@ def show_districts():
 def choose_street():
 	dis = raw_input("	Provide a district: ")
 	dia = raw_input("	Provide a day: ")
-	orden = "spark-submit chooseStreet.py " + sys.argv[1] + " " + dis + " " + dia
-	os.system(orden)
+	if(check_day(dia) == True):
+		orden = "spark-submit chooseStreet.py " + sys.argv[1] + " " + dis + " " + dia
+		os.system(orden)
+	else:
+		print("	Not valid day")
 
 def met_conditions_district():
 	dis = raw_input("	Provide a district: ")
@@ -68,9 +74,20 @@ def met_conditions_district():
 def hours_district():
 	dis = raw_input("	Provide a district: ")
 	dia = raw_input("	Provide a day: ")
-	orden = "spark-submit horasDistrito.py " + sys.argv[1] + " " + dis + " " + dia
-	os.system(orden)
+
+	if(check_day(dia) == True):
+		orden = "spark-submit horasDistrito.py " + sys.argv[1] + " " + dis + " " + dia
+		os.system(orden)
+	else:
+		print("	Not valid day")
 	
+def check_day(d):
+	d = d.upper()
+	if(d != "LUNES" and d != "MARTES" and d != "MIERCOLES" and d != "JUEVES" \
+	and d != "VIERNES" and d != "SABADO" and d != "DOMINGO"):
+		return False
+	return True
+
 
 # Init
 # ----------------------------------------------------------------------
