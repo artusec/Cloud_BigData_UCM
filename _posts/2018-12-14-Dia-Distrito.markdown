@@ -82,11 +82,12 @@ VILLA DE VALLECAS                  54
 
 ### Lunes
 
-<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/dia_distrito(lunes).png" height="130%" width="130%">
+<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/dia_distrito(lunes).png" height="150%" width="150%">
 
 ### Sábado
 
-<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/dia_distrito(sabado).png" height="130%" width="130%">
+<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/dia_distrito(sabado).png" height="150%" width="150%">
+
 
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
 [2]:
