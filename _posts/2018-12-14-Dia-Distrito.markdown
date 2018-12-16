@@ -1,132 +1,96 @@
 ---
 layout:     post
-title:      Dia según el distrito
-tags: 		spark AWS Dia 
-subtitle:  	Some Short Description of Post
+title:      Días con mas Accidentalidad por Distritos
+tags: 		Spark AWS Dia Distritos 
+subtitle:  	Muestra los distritos con más accidentes, segun el día introducido
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->
 
-# Table of Contents
-
-* TOC
-{:toc}
-
 # Descripción del Programa
-
+Este programa permite obtener los distritos con mayor accidentalidad, según el dia que especifiquemos. Además, muestra el numero de accidentes por cada distrito. 
+Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa inline `show_districts.py` o su descripción en [esta web][2]
 # Como ejecutarlo
+
+## 1. Modo Local
+Para ejecutar este programa necesitamos tener instalado en nuestro ordenador **Spark en Modo Local**. Además, necesitariamos tener instalado el paquete de ***Pandas*** de Python, que se descarga de la siguiente manera:
+
+{% highlight shell %}
+
+sudo apt-get install python-pip
+sudo pip install numpy
+sudo pip install pandas
+
+{% endhighlight %}
+
+## 2. Modo Cluster
+Para ejecutarlo en este modo necesitariamos un ***cluster*** en AWS (Amazon Web Services), utilizando el modulo EMR (***Elastic Map Reduce***). En cuanto a las especificaciones del ***cluster***, se encuentran detalladas en la pagina [descripción][1] de esta web.
+
+
+
+Una vez que ya hemos elegido el modo de ejecución y revisado todos los elementos, nos disponemos a ejecutar el programa. Para ello, utilizaremos la siguiente linea de comando: 
+
+{% highlight shell %}
+
+spark-submit dia_distrito.py (file) (dia de la semana)
+
+{% endhighlight %}
+
+- El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
+- En el campo de dia de la semana, hay que incluir el dia de la semana que queremos analizar (lunes, martes,etc.). **IMPORTANTE:** para que funcione el dia tiene que estar escrito en Español
+
+
+Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:
+
+{% highlight shell %}
+
+--num-executors (number) --executor-cores (number)
+
+{% endhighlight %}
+
 
 # Salida del programa
 
-Inline `code`.
-
 {% highlight python %}
-import numpy as np
-def hello_world():
-    print('Hello World!'')
+
+DISTRITO                         COUNT    
+SALAMANCA                        2670
+CHAMARTIN                        2558
+CIUDAD LINEAL                    2463
+PUENTE DE VALLECAS               2456
+CENTRO                           2291
+CARABANCHEL                      2067
+CHAMBERI                         2002
+FUENCARRAL-EL PARDO              1976
+MONCLOA-ARAVACA                  1860
+SAN BLAS                         1856
+RETIRO                           1852
+TETUAN                           1769
+ARGANZUELA                       1744
+LATINA                           1704
+HORTALEZA                        1417
+USERA                            1151
+VILLAVERDE                        970
+MORATALAZ                         966
+VILLA DE VALLECAS                 738
+BARAJAS                           573
+VICALVARO                         399
+VILLA DE VALLECAS                  54
+
 {% endhighlight %}
 
-# Analisis de Tiempos en el Cluster
+# Análisis de Tiempos en el Cluster
 
 Master | Cores | Executors | Executors Cores | Tiempo
 |:---------|:----------|:----------:|---------:|---------:|
-1 | 2 |  1  | 1 | 0,5s |
-1 | 2 |  1  | 1 | 0,5s | 
-1 | 2 |  1  | 1 | 0,5s |
-1 | 2 |  1  | 1 | 0,5s |
-
-### Header 3
-
-## Styling
-
-**Bold**
-
-*Italics*
-
-***Bold and Italics***
-
-## Lists
-
-1. Item 1
-
-2. Item 2
-
-* Unordered Item
-
-  * Sub Item 1
-
-    1. **Bold** Sub Sub Ordered Item
-
-## Links
-
-[In-Line](https://www.google.com)
-
-[I'm a reference-style link 1][1]
-
-[I'm a reference-style link 1][2]
-
-[1]:https://www.mozilla.org
-[2]:http://www.reddit.com
-
-## Images
-
-Hold your pointer clicked over the image to expand the view.
-
-![Description](http://projectpages.github.io/project-pages/img/Logo_Fairy_Tail_right.png)
-
-## Code
-
-Inline `code`.
-
-{% highlight python %}
-import numpy as np
-def hello_world():
-    print('Hello World!'')
-{% endhighlight %}
-
-## MathJax
-
-Use MathJax for Math.
-$$ A = \pi r^2 $$
-
-## Tables
-
-Here | is | a | row!
-|---------|:----------|:----------:|---------:|
-is   |Left|  Center  |Right|
-a    | cut | it | A
-column  | short | B | C
-
-## Quotes
-
-> War does not decide who is *right*, only who is **left**.
-
-## Rule
-
----
-
-## HTML
-
-Can write the whole post or sections in HTML for very specific needs. [For the advanced user or the code savvy.]
-
-# Advanced Functionality
-
-Head over to the [documentation page](http://projectpages.github.io/ppguide/) for tutorials on some basic html formatting and some extensions you can use for cool stuff like interactive 3D visualizations.
-
-## Color and Alignment
-
-<p align="center">This text is centered.</p>
-
-<p style="color:red">This is a red text with <span style="color:blue">blue</span> and <span style="color:green">green</span> inline text.</p>
-
-# Some Advanced Features
-
-## Data Projector
-
-<embed src="/project-pages/2016/05/02/New-Projector/" height="500px" width="100%">
-
-## STL
-
-<div align="center"><script src="https://embed.github.com/view/3d/projectpages/project-pages/gh-pages/stl/test.stl"></script></div>
+1 | 2 |  2  | 1 | 0,5s |
+1 | 2 |  2  | 2 | 0,5s | 
+1 | 4 |  2  | 1 | 0,5s |
+1 | 4 |  2  | 2 | 0,5s |
+1 | 4 |  4  | 1 | 0,5s |
+1 | 4 |  4  | 2 | 0,5s |
+1 | 4 |  4  | 4 | 0,5s |
 
 
+[1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
+[2]:

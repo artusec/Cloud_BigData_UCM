@@ -35,7 +35,7 @@ spark-submit perfil.py (file)
 
 {% endhighlight %}
 
-El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
+- El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
 
 
 Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:
