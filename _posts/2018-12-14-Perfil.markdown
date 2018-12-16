@@ -23,7 +23,7 @@ sudo pip install pandas
 {% endhighlight %}
 
 ## 2. Modo Cluster
-Para ejecutarlo en este modo necesitariamos un ***cluster*** en AWS (Amazon Web Services), utilizando el modulo EMR (***Elastic Map Reduce***). En cuanto a las especificaciones de la maquina del ***cluster***, se encuentran detalladas en la pagina [Descripción][1] de esta web.
+Para ejecutarlo en este modo necesitariamos un ***cluster*** en AWS (Amazon Web Services), utilizando el modulo EMR (***Elastic Map Reduce***). En cuanto a las especificaciones del ***cluster***, se encuentran detalladas en la pagina [descripción][1] de esta web.
 
 
 
