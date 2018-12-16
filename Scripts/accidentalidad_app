@@ -80,6 +80,16 @@ def hours_district():
 		os.system(orden)
 	else:
 		print("	Not valid day")
+
+def hours_place():
+	dis = raw_input("	Provide a district: ")
+	dia = raw_input("	Provide a day: ")
+
+	if(check_day(dia) == True):
+		orden = "spark-submit horasLugares.py " + sys.argv[1] + " " + dis + " " + dia
+		os.system(orden)
+	else:
+		print("	Not valid day")
 	
 def check_day(d):
 	d = d.upper()
@@ -134,6 +144,7 @@ while True:
 	print("	9. Choose street less rugged from a district")
 	print("	10. Meteorological conditions that cause more accidents by district")
 	print("	11. Hour with more accident rate in a district")
+	print(" 12. Hour with more accident rate in all places of a district")
 	print("\n")
 	print("	0. Exit")
 	print("------------------------------------------------------------------------------")
@@ -142,7 +153,7 @@ while True:
     
 	avaiable = { '1': day, '2': district, '3': profile, '4': district_day,\
 	'5': district_street, '6': vehicle, '7': met_conditions, '8' : show_districts,\
-	'9' : choose_street, '10' : met_conditions_district, '11' : hours_district}
+	'9' : choose_street, '10' : met_conditions_district, '11' : hours_district, '12' : hours_place}
  	
  	if option == '0':
  		print("\n")

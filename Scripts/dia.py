@@ -6,7 +6,7 @@ import string
 import sys
 
 if len(sys.argv) != 2:
-	print "Usage: dia_mas_accidentes [file]"
+	print("Usage: dia_mas_accidentes [file]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local[4]').setAppName("dia_mas_Accidentes")

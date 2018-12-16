@@ -8,7 +8,7 @@ import sys
 23, 25
 
 if len(sys.argv) != 2:
-	print "Usage: perfil_mas_accidentes [file]"
+	print("Usage: perfil_mas_accidentes [file]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("perfil_mas_Accidentes")
@@ -30,7 +30,7 @@ else:
 	pr = spark.sql("select Sexo, Edad, count(Num) as Cuenta from rdd group by Sexo, Edad\
 	order by Cuenta desc")
 	
-	print pr.toPandas()
+	print(pr.show())
 	
 	
 	

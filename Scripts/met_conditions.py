@@ -10,7 +10,7 @@ import sys
 import re 
 
 if len(sys.argv) != 2:
-	print "Usage: contexto_mas_accidentes [file]"
+	print("Usage: contexto_mas_accidentes [file]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("contexto_mas_accidentes")
@@ -107,27 +107,5 @@ else:
 										("Condiciones de la Via: Derrape por hielo", cpsv_hielo_counted), 
 										("Condiciones de la Via: Siniestro en via seca y despejada", cpsv_seca_counted)
 										], schema)
-	df_result.orderBy(df_result["Number of accidents"].desc()).show(20, False)
+	df_result.orderBy(df_result["Number of accidents"].desc()).show(df_result.count(), False)
 
-	
-	
-
-	
-
-
-
-
-
-	
-
-	#cpfa_granizo.show()
-	#cpfa_hielo.show()
-	#cpfa_niebla.show()
-	#cpfa_seco.show()
-	#cpfa_nieve.show()
-	#cpsv_mojada.show()
-	#cpsv_aceite.show()
-	#cpsv_barro.show()
-	#cpsv_grava.show()
-	#cpsv_hielo.show()
-	#cpsv_seca.show()

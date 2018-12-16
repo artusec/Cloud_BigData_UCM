@@ -12,7 +12,7 @@ import sys
 import re 
 
 if len(sys.argv) < 3:
-	print "Usage: contexto_mas_accidentes_por_distrito [file] [district]"
+	print("Usage: contexto_mas_accidentes_por_distrito [file] [district]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("contexto_mas_accidentes_por_distrito")
@@ -87,7 +87,7 @@ if(valid == True):
 									("Condiciones de la Via: Derrape por hielo", int(counter[9])), 
 									("Condiciones de la Via: Siniestro en via seca y despejada", int(counter[10]))
 									], schema)
-	df_result1.orderBy(df_result1["Number of accidents"].desc()).show(20, False)
+	df_result1.orderBy(df_result1["Number of accidents"].desc()).show(df_result1.count(), False)
 else: 
 	print("We couldn't find a district with the name you searched")
 
