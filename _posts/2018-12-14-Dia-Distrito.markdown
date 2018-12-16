@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Días con mas Accidentalidad por Distritos
+title:      Distritos con más accidentes (según el dia de la semana)
 tags: 		Spark AWS Dia Distritos 
 subtitle:  	Muestra los distritos con más accidentes, segun el día introducido
 category:  project1
@@ -36,8 +36,8 @@ spark-submit dia_distrito.py (file) (dia de la semana)
 
 {% endhighlight %}
 
-- El contenido que se encuentra entre parentesis es el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
-- En el campo de dia de la semana, hay que incluir el dia de la semana que queremos analizar (lunes, martes,etc.). **IMPORTANTE:** para que funcione el dia tiene que estar escrito en Español
+- El contenido ***file*** representa el archivo que queremos procesar y es importante que el formato de este archivo sea **csv**.
+- En el campo de dia de la semana, hay que incluir el dia de la semana que queremos analizar (lunes, martes,etc.). **IMPORTANTE:** para que funcione el dia tiene que estar escrito en español
 
 
 Si estamos probando el programa dentro de un **cluster**, podemos definir el numero de ***workers*** y de ***worker-nodes***. Para ello tendremos que añadir estos parametros a la linea de comando anterior:
@@ -79,18 +79,14 @@ VILLA DE VALLECAS                  54
 
 {% endhighlight %}
 
-# Análisis de Tiempos en el Cluster
 
-Master | Cores | Executors | Executors Cores | Tiempo
-|:---------|:----------|:----------:|---------:|---------:|
-1 | 2 |  2  | 1 | 0,5s |
-1 | 2 |  2  | 2 | 0,5s | 
-1 | 4 |  2  | 1 | 0,5s |
-1 | 4 |  2  | 2 | 0,5s |
-1 | 4 |  4  | 1 | 0,5s |
-1 | 4 |  4  | 2 | 0,5s |
-1 | 4 |  4  | 4 | 0,5s |
+### Lunes
 
+<img src="Cloud_BigData_UCM/img/graphics/dia_distrito(lunes).png" height="80px" width="100px">
+
+### Sábado
+
+<img src="Cloud_BigData_UCM/img/graphics/dia_distrito(sabado).png" height="80px" width="100px">
 
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
 [2]:
