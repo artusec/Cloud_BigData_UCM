@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Número de accidentes según condiciones meteorológicas o de la via (seleccionando el distrito)
-tags: 		Spark AWS Dia Distritos 
+tags: 		Spark AWS Tiempo Via Distritos
 subtitle:  	Muestra el número de accidentes segun las circunstancias meteorológicas o de la via en las que se producieron, seleccionado el distrito a analizar
 category:  project1
 ---

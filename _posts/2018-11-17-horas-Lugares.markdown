@@ -2,7 +2,7 @@
 layout:     post
 title:      Número de accidentes en una calle y rango horario en el que se produce en un distrito y dia determinados
 tags: 		Spark AWS Hora Dia Distritos Calles
-subtitle:  	Muestra el numero de accidentes en un determinado rango horario de una calle a partir de un distrito y dia especificados
+subtitle:  	Muestra el número de accidentes en un determinado rango horario de una calle a partir de un distrito y dia especificados
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->

@@ -1,20 +1,13 @@
 ---
 layout:     post
-title:      Vehiculos más accidentados
-tags: 		Spark AWS Dia Distritos  	
+title:      Muestra todos los distritos disponibles
+tags: 		Spark AWS Distritos 	
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->
 
 # Descripción del Programa
-Este programa muestra los tipos de vehiculos más accidentados. Los vehiculos pueden ser:
-
-- Turismo
-- Motocicleta
-- Furgoneta
-- Vehiculo de 3 ruedas
-- Ambulancia
-- Más...
+Este programa muestra todos los distritos disponibles en la fuente de datos utilizada
 
 # Como ejecutarlo
 
@@ -38,7 +31,7 @@ Una vez que ya hemos elegido el modo de ejecución y revisado todos los elemento
 
 {% highlight shell %}
 
-spark-submit vehiculo.py (file)
+spark-submit show_districts.py (file)
 
 {% endhighlight %}
 
@@ -58,21 +51,33 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% highlight python %}
 
-+--------------------+------+
-|       Tipo Vehiculo| count|
-+--------------------+------+
-|TURISMO          ...|128974|
-|MOTOCICLETA      ...| 32026|
-|FURGONETA        ...|  9690|
-|AUTO-TAXI        ...|  8144|
-|AUTOBUS-AUTOCAR  ...|  6883|
-|CICLOMOTOR       ...|  5914|
-|BICICLETA        ...|  5429|
-|CAMION           ...|  2441|
-|VARIOS           ...|  2063|
-|AMBULANCIA       ...|   482|
-|VEH.3 RUEDAS     ...|    39|
-+--------------------+------+
++--------------------+
+|      DISTRITO      |
++--------------------+
+|ARGANZUELA       ...|
+|BARAJAS          ...|
+|CARABANCHEL      ...|
+|CENTRO           ...|
+|CHAMARTIN        ...|
+|CHAMBERI         ...|
+|CIUDAD LINEAL    ...|
+|FUENCARRAL-EL PAR...|
+|HORTALEZA        ...|
+|LATINA           ...|
+|MONCLOA-ARAVACA  ...|
+|MORATALAZ        ...|
+|PUENTE DE VALLECA...|
+|RETIRO           ...|
+|SALAMANCA        ...|
+|SAN BLAS         ...|
+|TETUAN           ...|
+|USERA            ...|
+|VICALVARO        ...|
+|VILLA DE VALLECAS...|
+|VILLA DE VALLECAS...|
+|VILLAVERDE       ...|
++--------------------+
+
 
 {% endhighlight %}
 
