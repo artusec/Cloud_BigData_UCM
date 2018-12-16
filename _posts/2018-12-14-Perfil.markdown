@@ -7,11 +7,6 @@ category:  project1
 ---
 <!-- Start Writing Below in Markdown -->
 
-# Tabla de contenidos
-
-* TOC
-{:toc}
-
 # Descripción del Programa
 Este programa permite obtener los perfiles de personas más propensos a sufrir accidentes. De cada perfil, detallamos su sexo, rango de edad y el número de personas que cumplen esta descripción
 # Como ejecutarlo
@@ -27,8 +22,8 @@ sudo pip install pandas
 
 {% endhighlight %}
 
-##2. Modo Cluster
-Para ejecutarlo en este modo necesitariamos un ***cluster*** en AWS (Amazon Web Services), utilizando el modulo EMR (***Elastic Map Reduce***). En cuanto a las especificaciones de la maquina del ***cluster**, se encuentran detalladas en la pagina [Descripción][1] de esta web.
+## 2. Modo Cluster
+Para ejecutarlo en este modo necesitariamos un ***cluster*** en AWS (Amazon Web Services), utilizando el modulo EMR (***Elastic Map Reduce***). En cuanto a las especificaciones de la maquina del ***cluster***, se encuentran detalladas en la pagina [Descripción][1] de esta web.
 
 
 
