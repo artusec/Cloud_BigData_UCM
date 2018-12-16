@@ -6,7 +6,7 @@ import sys
 import pandas as pd
 
 if len(sys.argv) != 4:
-	print("Usage: chooseStreet.py [input_file] [distrito] [day]")
+	print("Usage: horasLugares.py [input_file] [distrito] [day]")
 	exit(-1)
 else:
 	conf = SparkConf().setMaster('local').setAppName("horasDistrito")
