@@ -76,4 +76,7 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% endhighlight %}
 
+
+<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/vehiculo.jpeg" height="150%" width="150%">
+
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
