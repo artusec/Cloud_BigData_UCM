@@ -144,7 +144,7 @@ while True:
 	print("	9. Choose street less rugged from a district")
 	print("	10. Meteorological conditions that cause more accidents by district")
 	print("	11. Hour with more accident rate in a district")
-	print(" 12. Hour with more accident rate in all places of a district")
+	print("	12. Hour with more accident rate in all places of a district")
 	print("\n")
 	print("	0. Exit")
 	print("------------------------------------------------------------------------------")
