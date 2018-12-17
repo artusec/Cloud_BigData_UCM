@@ -21,7 +21,9 @@ else:
 	
 	df = df_select.groupBy('DISTRITO').count()
 	
-	df_final = df.orderBy(df["count"].desc()).show()
+	df_final = df.orderBy(df["count"].desc())
+
+	df_final.show(df_final.count(), False)
 	
 	
 	
