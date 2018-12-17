@@ -51,42 +51,30 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% highlight python %}
 
-
-Sexo                Edad  Cuenta
-HOMBRE     DE 30 A 34 ANOS   17935
-HOMBRE     DE 35 A 39 AÑOS   17391
-HOMBRE     DE 25 A 29 AÑOS   17016
-HOMBRE     DE 40 A 44 AÑOS   15235
-HOMBRE     DE 45 A 49 AÑOS   12682
-HOMBRE     DE 21 A 24 AÑOS   11161
-HOMBRE     DE 50 A 54 AÑOS   10280
-MUJER     DE 25 A 29 AÑOS    8304
-MUJER     DE 30 A 34 ANOS    8166
-MUJER     DE 35 A 39 AÑOS    7691
-HOMBRE     DE 55 A 59 AÑOS    6937
-MUJER     DE 40 A 44 AÑOS    6394
-MUJER     DE 21 A 24 AÑOS    5396
-MUJER     DE 45 A 49 AÑOS    5387
-HOMBRE     DE 18 A 20 AÑOS    5090
-HOMBRE     DE 60 A 64 AÑOS    4575
-MUJER     DE 50 A 54 AÑOS    4393
-MUJER     DE 55 A 59 AÑOS    3030
-MUJER     DE 18 A 20 AÑOS    2558
-HOMBRE     DE 65 A 69 AÑOS    2399
-HOMBRE  DE MAS DE 74 AÑOS     2097
-MUJER     DE 60 A 64 AÑOS    1997
-HOMBRE     DE 70 A 74 AÑOS    1608
-MUJER  DE MAS DE 74 AÑOS     1544
-MUJER     DE 65 A 69 AÑOS    1348
-HOMBRE       DE 0 A 5 AÑOS    1286
-MUJER       DE 0 A 5 AÑOS    1136
-HOMBRE     DE 15 A 17 AÑOS    1120
-HOMBRE     DE 10 A 14 AÑOS    1048
-MUJER     DE 70 A 74 AÑOS     973
-MUJER     DE 10 A 14 AÑOS     936
-HOMBRE      DE 6 A 9 AÑOS      914
-MUJER      DE 6 A 9 AÑOS      818
-MUJER     DE 15 A 17 AÑOS     730
++------+---------------+------+
+|  Sexo|           Edad|Cuenta|
++------+---------------+------+
+|HOMBRE|DE 30 A 34 ANOS| 17935|
+|HOMBRE|DE 35 A 39 AÑOS| 17391|
+|HOMBRE|DE 25 A 29 AÑOS| 17016|
+|HOMBRE|DE 40 A 44 AÑOS| 15235|
+|HOMBRE|DE 45 A 49 AÑOS| 12682|
+|HOMBRE|DE 21 A 24 AÑOS| 11161|
+|HOMBRE|DE 50 A 54 AÑOS| 10280|
+| MUJER|DE 25 A 29 AÑOS|  8304|
+| MUJER|DE 30 A 34 ANOS|  8166|
+| MUJER|DE 35 A 39 AÑOS|  7691|
+|HOMBRE|DE 55 A 59 AÑOS|  6937|
+| MUJER|DE 40 A 44 AÑOS|  6394|
+| MUJER|DE 21 A 24 AÑOS|  5396|
+| MUJER|DE 45 A 49 AÑOS|  5387|
+|HOMBRE|DE 18 A 20 AÑOS|  5090|
+|HOMBRE|DE 60 A 64 AÑOS|  4575|
+| MUJER|DE 50 A 54 AÑOS|  4393|
+| MUJER|DE 55 A 59 AÑOS|  3030|
+| MUJER|DE 18 A 20 AÑOS|  2558|
+|HOMBRE|DE 65 A 69 AÑOS|  2399|
++------+---------------+------+
 
 {% endhighlight %}
 

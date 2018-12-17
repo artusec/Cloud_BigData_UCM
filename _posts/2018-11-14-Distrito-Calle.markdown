@@ -9,7 +9,7 @@ category:  project1
 
 # Descripción del Programa
 Este programa permite obtener las calles más accidentadas en un distrito descrito. Además de dar el nombre de la calle donde se producen, se proporcionan el número de accidentes que se han producido en ella.
-Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa inline `show_districts.py` o su descripción en [esta web][2]
+Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa `show_districts.py` o su descripción en [esta web][2]
 # Como ejecutarlo
 
 ## 1. Modo Local
@@ -50,6 +50,8 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 # Salida del programa
 
+### Centro
+
 {% highlight python %}
 
 
@@ -84,37 +86,6 @@ CALLE DE SAGASTA NUM                           ...    113
 PLAZA DE COLON NUM                             ...    108
 CALLE DE BARBARA DE BRAGANZA - PASEO DE RECOLET...    104
 PASEO DE RECOLETOS - PLAZA DE CIBELES          ...    104
-...                                                   ...
-CALLE DEL MARQUES DE CUBAS - CALLE DE ZORRILLA ...      1
-CALLE DE ATOCHA - SUBTERRANEO                  ...      1
-CALLE DE MANUELA MALASAÑA - CALLE DE SAN BERNAR...      1
-CALLE DE LA MONTERA - CALLE DE LOS JARDINES    ...      1
-CALLE DE CARRETAS - CALLE DEL SOL              ...      1
-PLAZA DE LA VILLA NUM                          ...      1
-CALLE DE LA FARMACIA NUM                       ...      1
-CALLE DE ALGECIRAS - RONDA DE SEGOVIA          ...      1
-CUESTA DE LA VEGA - PARQUE DEL EMIR MOHAMED I  ...      1
-PLAZA DE SAN ILDEFONSO - CALLE DE DON FELIPE   ...      1
-PLAZA DE SANTA MARIA SOLEDAD TORRES ACOSTA NUM ...      1
-ESTACION DE METRO PRINCIPE PIO - PASEO DE LA VI...      1
-CALLE DE CALATRAVA - CALLE DEL ANGEL           ...      1
-CALLE DE ATOCHA - CALLE DEL PRADO              ...      1
-CALLE DE SAN LORENZO - CALLE DE SAN MARCOS     ...      1
-CUESTA DE SAN VICENTE - PASEO DEL EMBARCADERO  ...      1
-CALLE DE SAN ANDRES - CALLE DEL ESPIRITU SANTO ...      1
-CALLE DEL ESCORIAL NUM                         ...      1
-CALLE DE SERRANO JOVER - CALLE DE LA PRINCESA  ...      1
-CALLE DEL MOLINO DE VIENTO - CALLE DE DON FELIP...      1
-CALLE DE BAILEN - CALLE DE ARRIETA             ...      1
-CALLE DEL FACTOR - CALLE  MAYOR                ...      1
-PLAZA DE ISABEL II - CALLE DE ARRIETA          ...      1
-CALLE DE BAILEN - CALLE DE REQUENA             ...      1
-CALLE DE LA MAGDALENA - CALLE DE LAVAPIES      ...      1
-CALLE DE LA BALLESTA - CALLE DEL DESENGAÑO     ...      1
-CUESTA DE SAN VICENTE - AUTOVIA  M-30 CALZADA 1...      1
-CALLE DE COLON - CALLE DE FUENCARRAL           ...      1
-CALLE DE BAILEN - CALLE DE CALATRAVA           ...      1
-GRAN VIA DE SAN FRANCISCO - CARRERA DE SAN FRAN...      1
 
 {% endhighlight %}
 

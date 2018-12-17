@@ -9,7 +9,7 @@ category:  project1
 
 # Descripción del Programa
 Este programa permite obtener los distritos con mayor accidentalidad, según el dia que especifiquemos. Además, muestra el numero de accidentes por cada distrito. 
-Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa inline `show_districts.py` o su descripción en [esta web][2]
+Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa `show_districts.py` o su descripción en [esta web][2]
 # Como ejecutarlo
 
 ## 1. Modo Local
@@ -53,29 +53,28 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 {% highlight python %}
 
-DISTRITO                         COUNT    
-SALAMANCA                        2670
-CHAMARTIN                        2558
-CIUDAD LINEAL                    2463
-PUENTE DE VALLECAS               2456
-CENTRO                           2291
-CARABANCHEL                      2067
-CHAMBERI                         2002
-FUENCARRAL-EL PARDO              1976
-MONCLOA-ARAVACA                  1860
-SAN BLAS                         1856
-RETIRO                           1852
-TETUAN                           1769
-ARGANZUELA                       1744
-LATINA                           1704
-HORTALEZA                        1417
-USERA                            1151
-VILLAVERDE                        970
-MORATALAZ                         966
-VILLA DE VALLECAS                 738
-BARAJAS                           573
-VICALVARO                         399
-VILLA DE VALLECAS                  54
+DISTRITO  COUNT
+SALAMANCA   2670
+CHAMARTIN   2558
+CIUDAD LINEAL   2463
+PUENTE DE VALLECAS   2456
+CENTRO   2291
+CARABANCHEL   2067
+CHAMBERI   2002
+FUENCARRAL-EL PARDO   1976
+MONCLOA-ARAVACA   1860
+SAN BLAS   1856
+RETIRO   1852
+TETUAN   1769
+ARGANZUELA   1744
+LATINA   1704
+HORTALEZA   1417
+USERA   1151
+VILLAVERDE    970
+MORATALAZ    966
+VILLA DE VALLECAS    792
+BARAJAS    573
+VICALVARO    399
 
 {% endhighlight %}
 

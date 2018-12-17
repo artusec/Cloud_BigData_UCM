@@ -9,7 +9,7 @@ category:  project1
 
 # Descripción del Programa
 Este programa permite obtener las calles mas accidentadas de la ciudad de Madrid, según el dia y distritos que especifiquemos. Además de mostrar el nombre de la calle, muestra el número de accidentes producidos en esa calle.
-Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa inline `show_districts.py` o su descripción en [esta web][2]
+Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa `show_districts.py` o su descripción en [esta web][2]
 # Como ejecutarlo
 
 ## 1. Modo Local

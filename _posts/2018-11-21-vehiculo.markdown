@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Vehiculos más accidentados
+title:      Tipo de Vehiculos que sufren más accidentes
 tags: 		Spark AWS Vehiculos 	
 category:  project1
 ---

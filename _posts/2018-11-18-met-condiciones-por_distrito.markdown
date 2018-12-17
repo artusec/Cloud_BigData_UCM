@@ -25,7 +25,7 @@ Las condiciones de la via pueden ser:
 - Derrape por hielo
 - Derrape por barro
 
-Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa inline `show_districts.py` o su descripción en [esta web][2]
+Para saber los distritos disponibles en los datos o la forma en la que se escriben, recomendamos la ejecución del programa `show_districts.py` o su descripción en [esta web][2]
 # Como ejecutarlo
 
 ## 1. Modo Local
