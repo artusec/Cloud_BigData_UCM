@@ -74,7 +74,6 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 |USERA            ...|
 |VICALVARO        ...|
 |VILLA DE VALLECAS...|
-|VILLA DE VALLECAS...|
 |VILLAVERDE       ...|
 +--------------------+
 
