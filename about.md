@@ -9,7 +9,7 @@ Nuestro proyecto consiste en analizar los datos obtenidos de la [sede de datos d
 
 Todos los programas realizados se encuentran en la carpeta /Scripts del repositorio, pero en la seccion [Proyecto][3] de esta página, hemos explicado el funcionamiento de cada uno de ellos. Además, detallamos la salida que ofrece y, en algunos casos, representamos la salida en formato gráfico.
 
-Tambien, hemos realizado un ***script*** llamado inline `accidentalidad_app` donde centralizamos todos los programas creados. Por lo que podemos ejecutar todos los programas, mediante ese ***script***.
+Tambien, hemos realizado un ***script*** llamado `accidentalidad_app` donde centralizamos todos los programas creados. Por lo que podemos ejecutar todos los programas, mediante ese ***script***.
 
 ## Herramientas
 Para poder realizar este análisis y tratamiento de los datos, hemos utilizado Spark con Python (***v.3.7.1***) (usando la libreria de Pandas) en un cluster de Spark en AWS (Amazon Web Service).
