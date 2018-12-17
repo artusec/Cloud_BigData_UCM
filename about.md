@@ -22,7 +22,7 @@ Applications    | Spark
 Tipo de Instancias  | m4.xlarge
 Numero de Instancias  | 3 o 5, según los tiempos
 
-**NOTA:**Nuestra intención era realizar un análisis de tiempos de ejecución por cada programa, cambiando diferentes configuraciones (numero de instancias, ***executors*** y ***executors-core***). Pero, al no encontrar ninguna manera de obtener los tiempos ejecución, no hemos podido realizarlo.
+**NOTA:** Nuestra intención era realizar un análisis de tiempos de ejecución por cada programa, cambiando diferentes configuraciones (numero de instancias, ***executors*** y ***executors-core***). Pero, al no encontrar ninguna manera de obtener los tiempos ejecución, no hemos podido realizarlo.
 
 Para poder generar las gráficas mostradas hemos utilizado el modulo ***plot*** de Python. Para instalarlo, debes ejecutar el siguiente comando:
 
