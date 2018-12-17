@@ -1,6 +1,8 @@
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SparkSession, Row
 from pyspark.sql import SQLContext
+from pyspark.sql.functions import trim
+from pyspark.sql.functions import col
 
 import string
 import sys
@@ -16,5 +18,5 @@ else:
 	file = sys.argv[1]
 
 	data = spark.read.format("csv").option("header", "true").load(file)
-
-	data.select('DISTRITO').distinct().orderBy("DISTRITO").show(data.count())
+	
+	data.select(trim(col('DISTRITO'))).distinct().orderBy("DISTRITO").show(data.count(), False)
