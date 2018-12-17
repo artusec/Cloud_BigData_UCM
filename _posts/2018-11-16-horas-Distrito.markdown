@@ -88,7 +88,7 @@ Si estamos probando el programa dentro de un **cluster**, podemos definir el num
 
 ### Chamartin | Sábado
 
-<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/chooseStreet(Chamartin)(Sabado).png" height="150%" width="150%">
+<img src="https://artuyero.github.io/Cloud_BigData_UCM/img/graphics/horasDistrito(Chamartin)(Sabado).png" height="150%" width="150%">
 
 
 [1]:https://artuyero.github.io/Cloud_BigData_UCM//about/
