@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Distritos con más accidentes (según el dia de la semana)
-tags: 		Spark AWS Dia Distritos 
+tags: 		Spark Dia Distrito 
 subtitle:  	Muestra los distritos con más accidentes, segun el día introducido
 category:  project1
 ---

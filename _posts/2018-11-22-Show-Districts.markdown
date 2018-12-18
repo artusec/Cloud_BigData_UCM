@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Muestra todos los distritos disponibles
-tags: 		Spark AWS Distritos 	
+tags: 		Spark Distrito
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->

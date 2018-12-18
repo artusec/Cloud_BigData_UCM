@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Calles más Accidentadas (según el dia y el distrito)
-tags: 		Spark AWS Dia Distritos 
+tags: 		Spark Dia Distrito Calle 
 subtitle:  	Muestra las calles con mayor cantidad de accidentes, según el día y distritos especificados
 category:  project1
 ---

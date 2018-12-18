@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Dia con más accidentes
-tags: 		Spark Dia AWS
+tags: 		Spark Dia
 subtitle:  	Este programa muestra la fecha de los dias con más accidentes
 category:  project1
 ---

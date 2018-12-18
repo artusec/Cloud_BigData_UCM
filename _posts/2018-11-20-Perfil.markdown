@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Perfil de los Accidentados
-tags: 	Spark AWS Personas
+tags: 	Spark Personas
 subtitle:  Programa que muestra los perfiles más propensos a sufrir accidentes
 category:  project1
 ---

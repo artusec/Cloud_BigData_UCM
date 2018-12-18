@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Distritos con más accidentes
-tags: 	Spark AWS Distritos
+tags: 	Spark Distrito
 subtitle:  Programa que muestra los distritos donde se producen más cantidad de accidentes
 category:  project1
 ---

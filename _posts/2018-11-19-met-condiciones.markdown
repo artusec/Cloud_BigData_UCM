@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Número de accidentes en virtud a la situación meterológica o de la via en la que se producieron
-tags: 		Spark AWS Tiempo Via 	
+tags: 		Spark Condiciones	
 category:  project1
 ---
 <!-- Start Writing Below in Markdown -->

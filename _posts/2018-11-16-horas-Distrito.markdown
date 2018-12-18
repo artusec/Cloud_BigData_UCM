@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      El rango horario con más accidentes (según el distrito y el día)
-tags: 		Spark AWS Hora Dia Distritos 
+tags: 		Spark Hora Dia Distrito
 subtitle:  	Muestra las horas donde se producen mayor cantidad de accidentes en base a un distrito y dia introducidos
 category:  project1
 ---

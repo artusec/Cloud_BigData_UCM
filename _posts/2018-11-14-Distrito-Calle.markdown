@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Calles más accidentadas (según el distrito)
-tags: 	Spark AWS Calle Distrito
+tags: 	Spark Calle Distrito
 subtitle:  Programa que muestra las calles en las que se producen mayor cantidad de accidentes, según el distrito especificado
 category:  project1
 ---
